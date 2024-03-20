@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개 홈페이지</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('./background.jpg');
+            background-size: cover; /* 배경 이미지를 창에 맞게 조절 */
+            background-position: center; /* 배경 이미지를 중앙으로 정렬 */
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+        }
+
+        .main > * {
+            margin-bottom: 20px; /* 아래 여백 추가 */
+        }
+        
+
+        
+        .sections {
+            display: flex;
+            border: 2px solid black; 
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 2000px;
+            height: 1200px;
+        }
+
+        .section-container {
+            color: blue; /* 섹션 헤더 텍스트 색상 변경 */
+            font-size: 40px; /* 섹션 헤더 텍스트 크기 변경 */
+            padding: 20px; /* 내용과 테두리 간 여백 추가 */
+            border-radius: 10px; /* 테두리를 둥글게 만듦 */
+            margin-bottom: 20px; /* 각 섹션 간의 간격을 조정 */
+            width: 500px; /* 섹션 너비 조정 */
+            cursor: pointer; /* 마우스를 갖다대면 커서 모양 변경 */
+        }
+
+        .section-container:hover .section ul {
+            display: block; /* 마우스를 갖다대면 해당 섹션의 내용이 표시됨 */
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            color: orange; /* 섹션 헤더 텍스트 색상 변경 */
+            font-size: 30px; /* 섹션 헤더 텍스트 크기 변경 */
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+            display: none; /* 마우스를 갖다대기 전에는 내용을 숨김 */
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .profile {
+            width: 200px; /* 이미지의 너비 조절 */
+            margin-bottom: 20px; /* 이미지 아래 여백 추가 */
+        }
+
+        .info li, .education li, .career li, .portfolio li {
+            margin-bottom: 10px;
+            color: black; /* 내용 텍스트 색상 변경 */
+            font-size: 20px; /* 내용 텍스트 크기 변경 */
+        }
+
+        .info-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .info-container img {
+            width:200px; /* 이미지 너비 조절 */
+            margin-right: 20px; /* 이미지 오른쪽 여백 추가 */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>자기소개 홈페이지</h1>
+    </header>
+    <main class="main">
+        <div class="section-container">
+            <div class="info-container">
+                <img src="./face.png" alt="프로필 이미지">
+                <h2>내 정보</h2>
+                <ul class="info">
+                    <li>이름: 홍길동</li>
+                    <li>주소: 서울특별시 강남구</li>
+                    <li>이메일: example@example.com</li>
+                    <li>전화번호: 010-1234-5678</li>
+                    <li>생년월일: 1990년 1월 1일</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sections">
+            <div class="section-container">
+                <h2>포트폴리오</h2>
+                <ul class="portfolio">
+                    <li>
+                        <h3>온라인 쇼핑몰 웹 애플리케이션</h3>
+                        <p>이 프로젝트는 온라인 쇼핑몰의 웹 애플리케이션을 개발하는 것입니다. 사용자가 상품을 검색하고 주문할 수 있는 기능을 제공합니다.</p>
+                        <p>사용된 기술: HTML, CSS, JavaScript, Node.js, Express.js, MongoDB</p>
+                    </li>
+                    <li>
+                        <h3>블로그 웹사이트</h3>
+                        <p>이 프로젝트는 개인 블로그 웹사이트를 구축하는 것입니다. 사용자가 글을 작성하고 게시할 수 있는 기능을 제공합니다.</p>
+                        <p>사용된 기술: HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-container">
+                <h2>경력</h2>
+                <ul class="career">
+                    <li>회사 A - 2020년 ~ 현재</li>
+                    <li>회사 B - 2018년 ~ 2020년</li>
+                </ul>
+            </div>
+            <div class="section-container">
+                <h2>학력</h2>
+                <ul class="education">
+                    <li>초등학교: OO초등학교</li>
+                    <li>중학교: OO중학교</li>
+                    <li>고등학교: OO고등학교</li>
+                    <li>대학교: OO대학교</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
